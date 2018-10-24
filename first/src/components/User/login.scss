@@ -1,0 +1,71 @@
+@import '@/lib/reset.scss';
+.box {
+  background: #fff;
+  .logHeader {
+    @include rect(100%, 0.44rem);
+    position: relative;
+    .icon-zuojiantou {
+      position: absolute;
+      top: 50%;
+      left: 5%;
+      transform: translateY(-50%);
+    }
+  }
+  .content {
+    .eleTitle {
+      @include rect(100%, 0.6rem);
+      line-height: 0.6rem;
+      text-align: center;
+      img {
+        @include rect(2rem, 0.4rem);
+      }
+    }
+    .phone, .phoneCode {
+      @include rect(80%, 0.44rem);
+      border: 1px solid #cce;
+      border-radius: 4px;
+      margin-left: 10%;
+      margin-bottom: 20px;
+      position: relative;
+      line-height: 0.44rem;
+      #phone, #phoneCode {
+        border: none;
+        @include rect(70%, 90%);
+        padding-left: 5%;
+      }
+      .getCode {
+        position: absolute;
+        right: 5%;
+        top: 0%;
+        color: #ccc;
+      }
+    }
+    .loginInfo {
+      @include rect(80%, 0.44rem);
+      margin-left: 10%;
+      span {
+        color: #6bb8ff;
+        font-weight: bold;
+      }
+    }
+    .isLogin {
+      @include rect(80%, 0.44rem);
+      margin-left: 10%;
+      background-color: #4cd96f;
+      line-height: 0.44rem;
+      text-align: center;
+      color: #fff;
+      font-size: 16px;
+      border-radius: 6px;
+      margin-top: 0.25rem;
+    }
+    .aboutUs {
+      @include rect(80%, 0.44rem);
+      margin-left: 10%;
+      text-align: center;
+      line-height:0.44rem;
+      font-size: 12px;
+      color: #999999;
+    }
+  }
+}

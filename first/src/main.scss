@@ -1,0 +1,95 @@
+@import '@/lib/reset.scss';
+* { touch-action: pan-y; border: 0;box-shadow: 0;}
+html, body, .container, #root {
+  @include rect(100%, 100%);
+}
+
+.container {
+  @include flexbox();
+  @include flex-direction(column);
+  .box {
+    @include flex();
+    @include rect(100%, auto);
+    @include flexbox();
+    @include flex-direction(column);
+    overflow: hidden;
+    .header {
+      @include rect(100%, 0.44rem);
+      .my-drawer {
+        background-color: red;
+      }
+    }
+    .content {
+      @include flex();
+      @include rect(100%, auto);
+      @include overflow();
+      .my-drawer {
+        position: relative;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+      .my-drawer .am-drawer-sidebar {
+        background-color: #fff;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+      .my-drawer .am-drawer-sidebar .am-list {
+        width: 300px;
+        padding: 0;
+      }
+      .center{
+        @include flexbox();
+        @include rect(100%, 1.4rem);
+        @include background-color(#ffffff);
+        .cen-l{
+          position: relative;
+          @include rect(48%, 1.4rem);
+          margin-left: 7px;
+          img{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            @include rect(1.2rem, 0.6rem);
+          }
+        }
+        .cen-r{
+          position: relative;
+          @include rect(48%, 1.4rem);
+          margin-right: 7px;
+          img{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            @include rect(1.2rem, 0.6rem);
+          }
+        }
+      }
+    }
+  }
+  .footer {
+    @include rect(100%, 0.5rem);
+    @include background-color(#eee);
+
+    ul {
+      @include rect(100%, 100%);
+      @include flexbox();
+      a {
+        @include flex();
+        display: block;
+        position: relative;
+        @include flexbox();
+        @include justify-content();
+        padding-top: 0.25rem;
+        @include text-color(#333);
+        &.active {
+          @include text-color(#0096ff);
+        }
+        .iconfont {
+          position: absolute;
+          font-size: 0.16rem;
+          top: 5%;
+        }
+      }
+    }
+  }
+}

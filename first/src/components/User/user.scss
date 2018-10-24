@@ -1,0 +1,143 @@
+@import '@/lib/reset.scss';
+.box {
+  .header {
+    background-color: #008eff;
+    position: relative;
+    .icon-zuojiantou {
+      position: absolute;
+      left: 3%;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 14px;
+      color: #fff;
+    }
+    .HCenter {
+      position: absolute;
+      color: #fff;
+      font-size: 16px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      font-weight: bold;
+    }
+  }
+  .content {
+    .userInfo {
+      color: #fff;
+      background-color: #008eff;
+      @include rect(100%, 0.8rem);
+      @include flexbox();
+      .pic {
+        @include rect(0.8rem, 100%);
+        @include flexbox();
+        @include justify-content();
+        @include align-items();
+      }
+      .info {
+        @include flex();
+        position: relative;
+        h1 {
+          font-size: 18px;
+          font-weight: bold;
+          margin-top: 0.2rem;
+        }
+        .extra {
+          padding-left: 0.15rem;
+          font-size: 12px;
+          position: relative;
+          .icon-shouji {
+            color: #fff;
+            font-size: 12px;
+            position: absolute;
+            left: 0%;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+        .icon-youjiantou {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          font-size: 12px;
+          right: 5%;
+        }
+      }
+    }
+    .mainInfo {
+      @include rect(100%, 0.8rem);
+      background-color: #fff;
+      ul {
+      @include rect(100%, 100%);
+      @include flexbox();
+        a {
+          display: block;
+          @include flex();
+          @include flexbox();
+          @include justify-content();
+          padding-top: 0.5rem;
+          position: relative;
+          color: #333;
+          p {
+            color: red;
+            font-size: 25px;
+            background-color: #fff;
+            border-radius: 50%;
+            position: absolute;
+            top: 10%;
+          }
+          .icon-qianbao {
+            color: #ff9900;
+          }
+          .icon-hongbao1 {
+            color: #ff5f3e;
+          }
+          .icon-qian {
+            color: #6db095;
+          }
+        }
+      }
+    }
+    .myLocation {
+      margin: 0.1rem 0;
+    }
+    .mystore {
+      .icon-jinbishangcheng {
+        color: #94d94a;
+      }
+      .icon-libao {
+        color: #fb7b53;
+      }
+    }
+    .mykefu {
+      margin: 0.1rem 0;
+      .icon-service, .icon-xiazai {
+        color: #78c5ff;
+      }
+    }
+  }
+}
+
+.mainStyle {
+      @include rect(100%, 0.44rem);
+      background-color: #fff;
+      color: #333;
+      line-height: 0.44rem;
+      position: relative;
+      padding-left: 10%;
+      font-size: 0.16rem;
+      border-bottom: 1px solid #eee;
+      .font {
+        position: absolute;
+        left: 3%;
+        top: 50%;
+        transform: translateY(-50%);
+        color: blue;
+      }
+      .icon-youjiantou {
+        position: absolute;
+        right: 3%;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #ccc;
+      }
+    }

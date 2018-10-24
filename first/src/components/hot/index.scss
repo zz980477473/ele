@@ -1,0 +1,31 @@
+@import '@/lib/reset.scss';
+* { touch-action: pan-y; border: 0;box-shadow: 0;}
+html, body, .container, #root {
+  @include rect(100%, 100%);
+}
+.header{
+  @include rect(100%, 0.5rem);
+  @include background-color(#e9e3e3);
+  .headerBox{
+    @include rect(100%, 100%);
+    @include flexbox();
+    .am-segment{
+      @include flexbox();
+      @include rect(100%, 100%);
+      @include background-color(#fff);
+      .am-segment-item{
+        @include align-items();
+        @include flexbox();
+        @include justify-content();
+        @include flex();
+        @include rect(100%, 100%);
+        margin: 0 0.08rem;
+        color: #333;
+        &.active{
+            @include background-color(#12ddf8);
+            @include text-color(#fff)
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@import '@/lib/reset.scss';
+.proList{
+  @include flexbox();
+  @include rect(100%, 1.77rem);
+  flex-wrap: wrap;
+  .proItem{
+    display: block;
+    @include rect(20%, 48%);
+    @include text-color(#666);
+    @include font-size(0.12rem);
+    flex-wrap: wrap;
+    @include flexbox();
+    @include flex-direction(column);
+    @include justify-content();
+    @include align-items();
+    .itemImg{
+      text-align: center;
+      p{
+        width: 100%;
+        }
+      img{
+        @include rect(0.45rem, 0.45rem);
+        display: block;
+      }
+    }
+  }
+}
